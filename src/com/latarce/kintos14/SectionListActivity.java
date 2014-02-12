@@ -3,7 +3,6 @@ package com.latarce.kintos14;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
-import android.view.MenuItem;
 
 /**
  * An activity representing a list of Sections. This activity has different
@@ -75,6 +74,29 @@ public class SectionListActivity extends FragmentActivity implements
 			Intent selectIntent = null;
 			int id = Integer.parseInt(idStr);
 			switch (id) {
+				// BIENVENIDO
+				case 1:
+					selectIntent = new Intent(this, About.class);
+					startActivity(selectIntent);
+					break;
+
+				// COMO LLEGAR
+				case 2:
+					//selectIntent = new Intent(this, Gps.class);
+					//startActivity(selectIntent);
+					break;
+
+				// CALENDARIO
+				case 3:
+					selectIntent = new Intent(this, About.class);
+					startActivity(selectIntent);
+					break;
+					
+				// Chat
+				case 4:
+					selectIntent = new Intent(this, Chat.class);
+					startActivity(selectIntent);
+					break;
 			
 				// COMPARTIR
 				case 5:

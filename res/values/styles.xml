@@ -17,7 +17,7 @@
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
 
-    <style name="botones_azules" parent="@android:style/TextAppearance.Medium">
+    <style name="main_button" parent="@android:style/TextAppearance.Medium">
         <item name="android:layout_width">90dp</item>
         <item name="android:layout_height">90dp</item>
         <item name="android:layout_margin">2dp</item>
@@ -25,5 +25,33 @@
         <item name="android:typeface">monospace</item>
         <item name="android:background">@drawable/blue_button</item>
         <item name="android:layout_weight">1</item>
+    </style>
+    
+    <style name="chat_button" parent="@android:style/TextAppearance.Medium">
+        <item name="android:layout_width">90dp</item>
+        <item name="android:layout_height">90dp</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:shadowColor">#08088A</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:background">@drawable/chat_button</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+    
+     <style name="location_button" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">10dp</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:shadowColor">#08088A</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:background">@drawable/blue_button</item>
+    </style>
+    
+    <style name="location_toggle_button" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textColor">#0000ff</item>
+        <item name="android:textSize">10dp</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:shadowColor">#08088A</item>
+        <item name="android:typeface">monospace</item>
     </style>
 </resources>

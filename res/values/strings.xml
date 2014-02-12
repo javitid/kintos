@@ -3,7 +3,22 @@
 
     <string name="app_name">Quintos 2014 - San Pedro de Latarce</string>
     <string name="title_section_detail">Section Detail</string>
-    
+
+    <string name="chat_title">Chat Quintos 2014</string>
+	<string name="chat_introduce_mensaje">Introduce un mensaje</string>
+	<string name="chat_nombre">Nombre</string>
+	<string name="chat_enviar">Enviar</string>
+	<string name="chat_texto_copiado">Texto copiado:</string>
+	<string name="chat_sin_conexion">Has perdido la conexión a la red. Si quieres seguir usando el chat vuelve a conectarte.</string>
+	
+	<string name="gps_title">Localizador</string>
+	<string name="gps_label">GPS</string>
+	<string name="posicionar">Posicionar</string>
+	<string name="centrar">Centrar</string>
+	<string name="spdl">SP Latarce</string>	
+	<string name="satellite_turn_on">Satelite ON</string>
+	<string name="satellite_turn_off">Satelite OFF</string>
+	
 	<string name="share_subject">Quintos 2014, San Pedro de Latarce, Valladolid</string>
 	<string name="share_message">https://play.google.com/store/apps/details?id=com.latarce.location.dondeestamicoche</string>
 	<string name="share_chooser">¿Compartir Quintos 2014?</string>

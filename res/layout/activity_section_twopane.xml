@@ -9,7 +9,7 @@
     android:orientation="horizontal"
     android:showDividers="middle"
     tools:context=".SectionListActivity" 
-    style="@style/botones_azules" >
+    style="@style/main_button" >
 
     <!--
     This layout is a two-pane layout for the Sections

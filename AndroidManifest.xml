@@ -9,6 +9,9 @@
         android:targetSdkVersion="19" />
 
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
     
     <application
         android:allowBackup="true"
@@ -32,6 +35,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".SectionListActivity" />
         </activity>
+		<activity android:name="com.latarce.kintos14.Gps"
+				  android:label="@string/gps_title"
+				  android:screenOrientation="portrait">
+		</activity>
+		<activity android:name="com.latarce.kintos14.Chat"
+				  android:label="@string/chat_title"
+				  android:screenOrientation="portrait">
+		</activity>
         <activity android:name="com.latarce.kintos14.About" 
             android:label="@string/about_title"
             android:theme="@android:style/Theme.Dialog">
