@@ -6,7 +6,6 @@ import android.support.v4.app.ListFragment;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.SimpleAdapter;
 
 import com.latarce.kintos14.dummy.DummyContent;
 
@@ -71,9 +70,7 @@ public class SectionListFragment extends ListFragment {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		// TODO: replace with a real list adapter.
 		setListAdapter(new ArrayAdapter<DummyContent.DummyItem>(getActivity(),
-				//android.R.layout.simple_list_item_activated_1,
 				R.layout.list_adapter,
 				R.id.listado, DummyContent.ITEMS));
 		

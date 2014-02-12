@@ -3,6 +3,7 @@ package com.latarce.kintos14;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.view.MenuItem;
 
 /**
  * An activity representing a list of Sections. This activity has different
@@ -56,13 +57,13 @@ public class SectionListActivity extends FragmentActivity implements
 	 * that the item with the given ID was selected.
 	 */
 	@Override
-	public void onItemSelected(String id) {
+	public void onItemSelected(String idStr) {
 		if (mTwoPane) {
 			// In two-pane mode, show the detail view in this activity by
 			// adding or replacing the detail fragment using a
 			// fragment transaction.
 			Bundle arguments = new Bundle();
-			arguments.putString(SectionDetailFragment.ARG_ITEM_ID, id);
+			arguments.putString(SectionDetailFragment.ARG_ITEM_ID, idStr);
 			SectionDetailFragment fragment = new SectionDetailFragment();
 			fragment.setArguments(arguments);
 			getSupportFragmentManager().beginTransaction()
@@ -71,9 +72,32 @@ public class SectionListActivity extends FragmentActivity implements
 		} else {
 			// In single-pane mode, simply start the detail activity
 			// for the selected item ID.
-			Intent detailIntent = new Intent(this, SectionDetailActivity.class);
-			detailIntent.putExtra(SectionDetailFragment.ARG_ITEM_ID, id);
-			startActivity(detailIntent);
+			Intent selectIntent = null;
+			int id = Integer.parseInt(idStr);
+			switch (id) {
+			
+				// COMPARTIR
+				case 5:
+					selectIntent = new Intent(android.content.Intent.ACTION_SEND); 
+					selectIntent.setType("text/plain");  
+					selectIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, getResources().getString(R.string.share_subject));
+					String shareMessage = getResources().getString(R.string.share_message);  
+					selectIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareMessage);  
+					startActivity(Intent.createChooser(selectIntent, getResources().getString(R.string.share_chooser)));  
+					break;
+				
+				// ACERCA DE
+				case 6:
+					selectIntent = new Intent(this, About.class);
+					startActivity(selectIntent);
+					break;
+	
+				default:
+					selectIntent = new Intent(this, SectionDetailActivity.class);
+					selectIntent.putExtra(SectionDetailFragment.ARG_ITEM_ID, idStr);
+					startActivity(selectIntent);
+					break;
+				}
 		}
 	}
 }

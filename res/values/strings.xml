@@ -3,5 +3,12 @@
 
     <string name="app_name">Quintos 2014 - San Pedro de Latarce</string>
     <string name="title_section_detail">Section Detail</string>
+    
+	<string name="share_subject">Quintos 2014, San Pedro de Latarce, Valladolid</string>
+	<string name="share_message">https://play.google.com/store/apps/details?id=com.latarce.location.dondeestamicoche</string>
+	<string name="share_chooser">¿Compartir Quintos 2014?</string>
+	
+    <string name="about_title">Quintos 2014 - SPdL</string>
+	<string name="about_text">\nVersión RC_0.1\nDesarrollado por Javier García\njavi@latarce.com\nwww.latarce.com</string>
 
 </resources>
