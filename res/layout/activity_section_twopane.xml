@@ -8,7 +8,8 @@
     android:divider="?android:attr/dividerHorizontal"
     android:orientation="horizontal"
     android:showDividers="middle"
-    tools:context=".SectionListActivity" >
+    tools:context=".SectionListActivity" 
+    style="@style/botones_azules" >
 
     <!--
     This layout is a two-pane layout for the Sections
@@ -21,14 +22,29 @@
     http://developer.android.com/training/multiscreen/screensizes.html#TaskUseAliasFilters
     -->
 
-    <fragment
-        android:id="@+id/section_list"
-        android:name="com.latarce.kintos14.SectionListFragment"
-        android:layout_width="0dp"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        tools:layout="@android:layout/list_content" />
+        android:orientation="vertical" 
+        android:layout_weight="1">
 
+	    <ImageView
+	        android:id="@+id/imageView1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_horizontal"
+	        android:src="@drawable/ic_launcher" />
+	        
+	    <fragment
+	        android:id="@+id/section_list"
+	        android:name="com.latarce.kintos14.SectionListFragment"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_marginTop="10dp"
+	        tools:layout="@android:layout/list_content" />
+
+    </LinearLayout>
+    
     <FrameLayout
         android:id="@+id/section_detail_container"
         android:layout_width="0dp"

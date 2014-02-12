@@ -17,4 +17,13 @@
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
 
+    <style name="botones_azules" parent="@android:style/TextAppearance.Medium">
+        <item name="android:layout_width">90dp</item>
+        <item name="android:layout_height">90dp</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:background">@drawable/blue_button</item>
+        <item name="android:layout_weight">1</item>
+    </style>
 </resources>
