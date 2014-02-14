@@ -2,6 +2,7 @@ package com.latarce.kintos14;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 
 /**
@@ -61,12 +62,16 @@ public class SectionListActivity extends FragmentActivity implements
 			// In two-pane mode, show the detail view in this activity by
 			// adding or replacing the detail fragment using a
 			// fragment transaction.
+			//if (idStr.matches("1")){
+			//	Programa fragment = new Programa();
+			//	getSupportFragmentManager().beginTransaction().replace(R.id.section_detail_container, fragment).commit();
+			//}
+
 			Bundle arguments = new Bundle();
 			arguments.putString(SectionDetailFragment.ARG_ITEM_ID, idStr);
 			SectionDetailFragment fragment = new SectionDetailFragment();
 			fragment.setArguments(arguments);
-			getSupportFragmentManager().beginTransaction()
-					.replace(R.id.section_detail_container, fragment).commit();
+			getSupportFragmentManager().beginTransaction().replace(R.id.section_detail_container, fragment).commit();
 
 		} else {
 			// In single-pane mode, simply start the detail activity

@@ -1,15 +1,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    style="@style/main_button"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="0dp"
     android:layout_marginLeft="16dp"
     android:layout_marginRight="16dp"
+    android:background="@drawable/fondo"
     android:baselineAligned="false"
     android:divider="?android:attr/dividerHorizontal"
     android:orientation="horizontal"
     android:showDividers="middle"
-    tools:context=".SectionListActivity" 
-    style="@style/main_button" >
+    tools:context=".SectionListActivity" >
 
     <!--
     This layout is a two-pane layout for the Sections
