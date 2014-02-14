@@ -88,7 +88,7 @@ public class SectionListActivity extends FragmentActivity implements
 
 				// CALENDARIO
 				case 3:
-					selectIntent = new Intent(this, About.class);
+					selectIntent = new Intent(this, Calendar.class);
 					startActivity(selectIntent);
 					break;
 					

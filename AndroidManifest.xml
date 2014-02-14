@@ -39,6 +39,9 @@
 				  android:label="@string/gps_title"
 				  android:screenOrientation="portrait">
 		</activity>
+		<activity android:name="com.latarce.kintos14.Calendar"
+				  android:label="@string/calendar_title">
+		</activity>
 		<activity android:name="com.latarce.kintos14.Chat"
 				  android:label="@string/chat_title"
 				  android:screenOrientation="portrait">

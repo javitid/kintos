@@ -4,6 +4,8 @@
     <string name="app_name">Quintos 2014 - San Pedro de Latarce</string>
     <string name="title_section_detail">Section Detail</string>
 
+   	<string name="calendar_title">Quintos 2014 - Calendario</string>
+   	
     <string name="chat_title">Chat Quintos 2014</string>
 	<string name="chat_introduce_mensaje">Introduce un mensaje</string>
 	<string name="chat_nombre">Nombre</string>
@@ -24,6 +26,6 @@
 	<string name="share_chooser">¿Compartir Quintos 2014?</string>
 	
     <string name="about_title">Quintos 2014 - SPdL</string>
-	<string name="about_text">\nVersión RC_0.1\nDesarrollado por Javier García\njavi@latarce.com\nwww.latarce.com</string>
+	<string name="about_text">\nVersión v1.0\nDesarrollado por Javier García\njavi@latarce.com\nwww.latarce.com\nwww.android.latarce.com</string>
 
 </resources>
