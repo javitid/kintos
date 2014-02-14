@@ -82,8 +82,8 @@ public class SectionListActivity extends FragmentActivity implements
 
 				// COMO LLEGAR
 				case 2:
-					//selectIntent = new Intent(this, Gps.class);
-					//startActivity(selectIntent);
+					selectIntent = new Intent(this, Gps.class);
+					startActivity(selectIntent);
 					break;
 
 				// CALENDARIO

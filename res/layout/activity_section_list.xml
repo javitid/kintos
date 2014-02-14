@@ -1,29 +1,36 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/main_button"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
+    android:background="@drawable/fondo"
+    android:orientation="vertical"
     tools:context=".SectionListActivity" >
 
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
         android:src="@drawable/ic_launcher" />
 
-	<fragment
-	    android:id="@+id/section_list"
-	    android:name="com.latarce.kintos14.SectionListFragment"
-	    android:layout_width="250dp"
-	    android:layout_height="fill_parent"
-	    android:layout_below="@+id/imageView1"
-	    android:layout_centerHorizontal="true"
-	    android:layout_gravity="center_horizontal"
-	    android:layout_marginTop="10dp"
-	    tools:context=".SectionListActivity"
-	    tools:layout="@android:layout/list_content" />
-	
-</RelativeLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        style="@style/main_button"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView1"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical" >
 
+        <fragment
+            android:id="@+id/section_list"
+            android:name="com.latarce.kintos14.SectionListFragment"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            tools:context=".SectionListActivity"
+            tools:layout="@android:layout/list_content" />
+    </LinearLayout>
+
+</RelativeLayout>
