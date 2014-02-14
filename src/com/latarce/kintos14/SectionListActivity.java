@@ -76,7 +76,7 @@ public class SectionListActivity extends FragmentActivity implements
 			switch (id) {
 				// BIENVENIDO
 				case 1:
-					selectIntent = new Intent(this, About.class);
+					selectIntent = new Intent(this, Programa.class);
 					startActivity(selectIntent);
 					break;
 

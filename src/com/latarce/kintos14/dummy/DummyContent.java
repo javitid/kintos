@@ -25,7 +25,7 @@ public class DummyContent {
 
 	static {
 		// Add 3 sample items.
-		addItem(new DummyItem("1", "Bienvenido"));
+		addItem(new DummyItem("1", "Programa"));
 		addItem(new DummyItem("2", "Cómo llegar"));
 		addItem(new DummyItem("3", "Calendario"));
 		addItem(new DummyItem("4", "Chat"));

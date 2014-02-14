@@ -37,6 +37,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".SectionListActivity" />
         </activity>
+		<activity android:name=".Programa"
+				  android:screenOrientation="portrait"
+				  android:theme="@android:style/Theme.Light.NoTitleBar">
+		</activity>
 		<activity android:name=".Gps"
 				  android:label="@string/gps_title"
 				  android:screenOrientation="portrait"
