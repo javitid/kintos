@@ -2,7 +2,6 @@ package com.latarce.kintos14;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -22,8 +21,9 @@ public class Calendar extends Activity{
 		CalendarView calendar = (CalendarView)this.findViewById(R.id.calendarView1);
 		Time now = new Time();
 		now.setToNow();
-		SimpleDateFormat formatter = new SimpleDateFormat("d-M-yyyy hh:mm");
+		SimpleDateFormat formatter = new SimpleDateFormat("d-M-yyyy HH:mm");
 		SimpleDateFormat daysLeftFormatter = new SimpleDateFormat("dd");
+		SimpleDateFormat hoursLeftFormatter = new SimpleDateFormat("HH");
 		long startDate=0, actualDate=0, daysLeft=0;
 		try {
 			startDate = formatter.parse("7-3-2014 22:00").getTime();
@@ -43,8 +43,7 @@ public class Calendar extends Activity{
 			e.printStackTrace();
 		}
 		
-		Date dateLeft = new Date(daysLeft);
-		daysLeftText.setText("¡Faltan " + daysLeftFormatter.format(dateLeft) + " días para los Quintos!");
+		daysLeftText.setText("¡Faltan " + String.valueOf(Integer.parseInt(daysLeftFormatter.format(daysLeft)) - 1) + " días y " + hoursLeftFormatter.format(daysLeft) + " horas para Quintos!");
 		
 		calendar.setOnDateChangeListener(new OnDateChangeListener() {
 
