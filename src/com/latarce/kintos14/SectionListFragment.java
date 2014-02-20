@@ -6,6 +6,7 @@ import android.support.v4.app.ListFragment;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.SimpleAdapter;
 
 import com.latarce.kintos14.dummy.DummyContent;
 
@@ -70,9 +71,15 @@ public class SectionListFragment extends ListFragment {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		setListAdapter(new ArrayAdapter<DummyContent.DummyItem>(getActivity(),
-				R.layout.list_adapter,
-				R.id.listado, DummyContent.ITEMS));
+		//setListAdapter(new ArrayAdapter<DummyContent.DummyItem>(getActivity(),
+		//		R.layout.list_adapter,
+		//		R.id.listado, DummyContent.ITEMS));
+				
+        // Create the grid item mapping
+		String[] from = new String[] {"texto", "imagen"};
+		int[] to = new int[] {R.id.listado, R.id.imagen};
+		final SimpleAdapter adapter = new SimpleAdapter(getActivity(), DummyContent.ITEMS_ARRAYLIST_MAPS, R.layout.list_adapter, from, to);    
+		setListAdapter(adapter);
 		
 	}
 

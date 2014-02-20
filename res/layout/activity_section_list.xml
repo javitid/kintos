@@ -7,7 +7,7 @@
     tools:context=".SectionListActivity" >
 
     <ImageView
-        android:id="@+id/imageView1"
+        android:id="@+id/imagenMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -19,7 +19,7 @@
         android:id="@+id/linearLayout1"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView1"
+        android:layout_below="@+id/imagenMenu"
         android:layout_centerHorizontal="true"
         android:orientation="vertical" >
 

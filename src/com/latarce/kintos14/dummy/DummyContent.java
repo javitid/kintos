@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.latarce.kintos14.R;
+
 /**
  * Helper class for providing sample content for user interfaces created by
  * Android template wizards.
@@ -22,20 +24,28 @@ public class DummyContent {
 	 * A map of sample (dummy) items, by ID.
 	 */
 	public static Map<String, DummyItem> ITEM_MAP = new HashMap<String, DummyItem>();
-
+	
+	public static List<HashMap<String, String>> ITEMS_ARRAYLIST_MAPS = new ArrayList<HashMap<String, String>>();
+	
 	static {
 		// Add 3 sample items.
-		addItem(new DummyItem("1", "Programa"));
-		addItem(new DummyItem("2", "Cómo llegar"));
-		addItem(new DummyItem("3", "Calendario"));
-		addItem(new DummyItem("4", "Chat"));
-		addItem(new DummyItem("5", "Compartir App"));
-		addItem(new DummyItem("6", "Acerca de..."));
+		addItem(new DummyItem("1", "Programa", Integer.toString(R.drawable.programa)));
+		addItem(new DummyItem("2", "Cómo llegar", Integer.toString(R.drawable.gps)));
+		addItem(new DummyItem("3", "Calendario", Integer.toString(R.drawable.calendar)));
+		addItem(new DummyItem("4", "Chat", Integer.toString(R.drawable.chat)));
+		addItem(new DummyItem("5", "Compartir App", Integer.toString(android.R.drawable.ic_menu_share)));
+		addItem(new DummyItem("6", "Acerca de...", Integer.toString(R.drawable.news)));
 	}
 
 	private static void addItem(DummyItem item) {
 		ITEMS.add(item);
 		ITEM_MAP.put(item.id, item);
+		
+		HashMap<String, String> map = new HashMap<String, String>();
+		map.put("texto", item.content);
+		map.put("imagen", item.image);
+		ITEMS_ARRAYLIST_MAPS.add(map);
+		
 	}
 
 	/**
@@ -44,10 +54,12 @@ public class DummyContent {
 	public static class DummyItem {
 		public String id;
 		public String content;
+		public String image;
 
-		public DummyItem(String id, String content) {
+		public DummyItem(String id, String content, String image) {
 			this.id = id;
 			this.content = content;
+			this.image = image;
 		}
 
 		@Override
