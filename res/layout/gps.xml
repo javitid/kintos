@@ -97,13 +97,14 @@ xmlns:android="http://schemas.android.com/apk/res/android">
                     android:gravity="center_horizontal" >
 
                     <Button
-                        android:id="@+id/btSearch"
+                        android:id="@+id/btGoFromToSpdl"
                         style="@style/location_button"
                         android:layout_width="fill_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="35dp"
                         android:layout_marginTop="2dp"
-                        android:drawableRight="@android:drawable/ic_menu_search"
-                        android:visibility="invisible" />
+                        android:drawableRight="@android:drawable/ic_dialog_map"
+                        android:text="Ruta"
+                        android:visibility="visible" />
 
                 </TableRow>
                 

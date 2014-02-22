@@ -13,6 +13,7 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.location.Geocoder;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.view.View;
@@ -42,7 +43,7 @@ public class Gps extends MapActivity implements OnClickListener{
 	private Button btCenter;
 	private Button btSatelite;
 	private Button btSPDLCenter;
-	private Button btSearch;
+	private Button btGoFromToSpdl;
 	private TextView txtLocation;
 	private LocationManager mLocationManager;
 	private MyLocationListener mLocationListener;
@@ -69,8 +70,8 @@ public class Gps extends MapActivity implements OnClickListener{
 		btSPDLCenter.setOnClickListener(this);
 		btSatelite = (ToggleButton)this.findViewById(R.id.btSatelite);
 		btSatelite.setOnClickListener(this);
-		btSearch = (Button)this.findViewById(R.id.btSearch);
-		btSearch.setOnClickListener(this);
+		btGoFromToSpdl = (Button)this.findViewById(R.id.btGoFromToSpdl);
+		btGoFromToSpdl.setOnClickListener(this);
 		
 		//TEXTO
 		txtLocation = (TextView) this.findViewById(R.id.tvGPS);
@@ -175,10 +176,14 @@ public class Gps extends MapActivity implements OnClickListener{
 		        else
 		        	mapView.setSatellite(true);
 				break;
-			case R.id.btSearch:
+			case R.id.btGoFromToSpdl:
 				//Abrir Activity con cuadro de texto
 				//Intent i = new Intent(this, Search.class);
 				//startActivityForResult(i,1);
+
+				Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("http://maps.google.com/maps?saddr="+ myLoc.getLatitude() +","+ myLoc.getLongitude() +"&daddr="+ sanPedroLocation.getLatitude() +"," + sanPedroLocation.getLongitude()));
+				i.setClassName("com.google.android.apps.maps", "com.google.android.maps.MapsActivity");
+				startActivity(i);
 				break;
 			case R.id.btSavePosition:
 				//Guardar la posición
