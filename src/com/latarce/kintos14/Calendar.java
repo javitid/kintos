@@ -38,7 +38,7 @@ public class Calendar extends Activity{
 		
 		calendar.setShowWeekNumber(false);
 		try {
-			//calendar.setMinDate(actualDate);
+			calendar.setMinDate(formatter.parse("01-01-2014 00:01").getTime());
 			calendar.setDate(actualDate, true, true);
 			calendar.setMaxDate(formatter.parse("31-12-2014 23:59").getTime());
 		} catch (ParseException e) {
