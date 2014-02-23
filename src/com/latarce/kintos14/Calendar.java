@@ -71,10 +71,10 @@ public class Calendar extends Activity{
 		            		Toast.makeText(getApplicationContext(), "Día " + dayOfMonth + ", Toca esperar a los Quintos del año que viene...", Toast.LENGTH_SHORT).show();
 		            	}
 	            	}
-	            	else if (month<3){
+	            	else if (month<2){
 	            		Toast.makeText(getApplicationContext(), "¡Los Quintos empiezan el día 7 de Marzo!", Toast.LENGTH_SHORT).show();
 	            	}
-	            	else if (month>3){
+	            	else if (month>2){
 	            		Toast.makeText(getApplicationContext(), "Toca esperar a los Quintos del año que viene...", Toast.LENGTH_SHORT).show();
 	            	}
             	}
