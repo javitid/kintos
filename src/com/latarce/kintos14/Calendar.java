@@ -40,7 +40,7 @@ public class Calendar extends Activity{
 		try {
 			//calendar.setMinDate(actualDate);
 			calendar.setDate(actualDate, true, true);
-			calendar.setMaxDate(formatter.parse("09-03-2014 23:59").getTime());
+			calendar.setMaxDate(formatter.parse("31-12-2014 23:59").getTime());
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
@@ -54,7 +54,7 @@ public class Calendar extends Activity{
             public void onSelectedDayChange(CalendarView view, int year, int month,
                     int dayOfMonth) {
             	if (year==2014){
-	            	if (month==3){
+	            	if (month==2){
 		            	if (dayOfMonth==7){
 		            		Toast.makeText(getApplicationContext(), "Día " + dayOfMonth + ", ¡a las 22:00 empiezan los Quintos 2014!", Toast.LENGTH_LONG).show();
 		            	}
