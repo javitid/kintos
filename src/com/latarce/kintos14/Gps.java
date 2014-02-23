@@ -242,7 +242,10 @@ public class Gps extends MapActivity implements OnClickListener{
 	    	List<Address> addresses = new ArrayList<Address>();
 	    	int altitud = (int)myLoc.getAltitude();
 	    	String str_altitud = "\nAltitud: ";
-	    	    	
+	    	
+	    	// Activar botón de ruta
+	    	btGoFromToSpdl.setVisibility(View.VISIBLE);
+	    	
 		    //DATOS
 	    	if (altitud != 0){
 	    		str_altitud = str_altitud + altitud;
