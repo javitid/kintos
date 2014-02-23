@@ -65,17 +65,17 @@ public class Calendar extends Activity{
 		            		Toast.makeText(getApplicationContext(), "Día " + dayOfMonth + ", ¡por la mañana a correr el bollo, por la tarde a la carrera de cintas y por la noche al baile de fin de fiestas!", Toast.LENGTH_LONG).show();
 		            	}
 		            	else if (dayOfMonth < 7){
-		            		Toast.makeText(getApplicationContext(), "Día " + dayOfMonth + ", ¡los Quintos empiezan el día 7!", Toast.LENGTH_LONG).show();
+		            		Toast.makeText(getApplicationContext(), "Día " + dayOfMonth + ", ¡los Quintos empiezan el día 7!", Toast.LENGTH_SHORT).show();
 		            	}
 		            	else if (dayOfMonth > 9){
-		            		Toast.makeText(getApplicationContext(), "Día " + dayOfMonth + ", Toca esperar a los Quintos del año que viene...", Toast.LENGTH_LONG).show();
+		            		Toast.makeText(getApplicationContext(), "Día " + dayOfMonth + ", Toca esperar a los Quintos del año que viene...", Toast.LENGTH_SHORT).show();
 		            	}
 	            	}
 	            	else if (month<3){
-	            		Toast.makeText(getApplicationContext(), "¡Los Quintos empiezan el día 7 de Marzo!", Toast.LENGTH_LONG).show();
+	            		Toast.makeText(getApplicationContext(), "¡Los Quintos empiezan el día 7 de Marzo!", Toast.LENGTH_SHORT).show();
 	            	}
 	            	else if (month>3){
-	            		Toast.makeText(getApplicationContext(), "Toca esperar a los Quintos del año que viene...", Toast.LENGTH_LONG).show();
+	            		Toast.makeText(getApplicationContext(), "Toca esperar a los Quintos del año que viene...", Toast.LENGTH_SHORT).show();
 	            	}
             	}
             }
