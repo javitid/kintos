@@ -1,4 +1,4 @@
-package com.latarce.kintos14.dummy;
+package com.latarce.quintos.dummy;
 
 import java.util.ArrayList;
 import java.util.HashMap;

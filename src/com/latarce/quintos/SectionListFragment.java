@@ -1,4 +1,4 @@
-package com.latarce.kintos14;
+package com.latarce.quintos;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -8,7 +8,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
-import com.latarce.kintos14.dummy.DummyContent;
+import com.latarce.kintos14.R;
+import com.latarce.quintos.dummy.DummyContent;
 
 /**
  * A list fragment representing a list of Sections. This fragment also supports

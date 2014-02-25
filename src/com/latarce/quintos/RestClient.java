@@ -1,4 +1,4 @@
-package com.latarce.kintos14;
+package com.latarce.quintos;
 
 import java.io.BufferedReader;
 import java.io.IOException;

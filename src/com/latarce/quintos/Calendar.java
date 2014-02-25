@@ -1,8 +1,10 @@
-package com.latarce.kintos14;
+package com.latarce.quintos;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import com.latarce.kintos14.R;
 
 import android.app.Activity;
 import android.os.Bundle;
