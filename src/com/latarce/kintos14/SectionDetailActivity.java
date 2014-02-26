@@ -1,6 +1,4 @@
-package com.latarce.quintos;
-
-import com.latarce.kintos14.R;
+package com.latarce.kintos14;
 
 import android.content.Intent;
 import android.os.Bundle;

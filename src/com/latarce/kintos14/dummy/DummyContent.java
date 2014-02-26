@@ -1,11 +1,11 @@
-package com.latarce.quintos.dummy;
+package com.latarce.kintos14.dummy;
+
+import com.latarce.kintos14.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import com.latarce.kintos14.R;
 
 /**
  * Helper class for providing sample content for user interfaces created by

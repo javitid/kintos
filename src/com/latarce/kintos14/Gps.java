@@ -1,4 +1,4 @@
-package com.latarce.quintos;
+package com.latarce.kintos14;
 
 import android.content.Context;
 import android.content.Intent;
@@ -30,7 +30,6 @@ import com.google.android.maps.MapView;
 import com.google.android.maps.MyLocationOverlay;
 import com.google.android.maps.ItemizedOverlay;
 import com.google.android.maps.OverlayItem;
-import com.latarce.kintos14.R;
 
 import java.util.ArrayList;
 import java.util.List;

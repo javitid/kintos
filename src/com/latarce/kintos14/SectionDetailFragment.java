@@ -1,4 +1,4 @@
-package com.latarce.quintos;
+package com.latarce.kintos14;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -7,8 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.latarce.kintos14.R;
-import com.latarce.quintos.dummy.DummyContent;
+import com.latarce.kintos14.dummy.DummyContent;
 
 /**
  * A fragment representing a single Section detail screen. This fragment is

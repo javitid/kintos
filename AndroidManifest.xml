@@ -21,7 +21,7 @@
         
         <uses-library android:name="com.google.android.maps" />
         <activity
-            android:name="com.latarce.quintos.SectionListActivity"
+            android:name="com.latarce.kintos14.SectionListActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,30 +30,30 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.latarce.quintos.SectionDetailActivity"
+            android:name="com.latarce.kintos14.SectionDetailActivity"
             android:label="@string/title_section_detail"
-            android:parentActivityName="com.latarce.quintos.SectionListActivity" >
+            android:parentActivityName="com.latarce.kintos14.SectionListActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".SectionListActivity" />
         </activity>
-		<activity android:name="com.latarce.quintos.Programa"
+		<activity android:name="com.latarce.kintos14.Programa"
 				  android:screenOrientation="portrait"
 				  android:theme="@android:style/Theme.Light.NoTitleBar">
 		</activity>
-		<activity android:name="com.latarce.quintos.Gps"
+		<activity android:name="com.latarce.kintos14.Gps"
 				  android:label="@string/gps_title"
 				  android:screenOrientation="portrait"
 				  android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
 		</activity>
-		<activity android:name="com.latarce.quintos.Calendar"
+		<activity android:name="com.latarce.kintos14.Calendar"
 				  android:label="@string/calendar_title">
 		</activity>
-		<activity android:name="com.latarce.quintos.Chat"
+		<activity android:name="com.latarce.kintos14.Chat"
 				  android:label="@string/chat_title"
 				  android:screenOrientation="portrait">
 		</activity>
-        <activity android:name="com.latarce.quintos.About" 
+        <activity android:name="com.latarce.kintos14.About" 
             android:label="@string/about_title"
             android:theme="@android:style/Theme.Dialog">
         </activity>

@@ -1,4 +1,4 @@
-package com.latarce.quintos;
+package com.latarce.kintos14;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -7,8 +7,6 @@ import java.util.List;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import com.latarce.kintos14.R;
 
 import android.app.Activity;
 import android.os.AsyncTask;
