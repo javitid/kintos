@@ -1,8 +1,14 @@
 package com.latarce.kintos14;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.util.Base64;
+import android.widget.Toast;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 /**
  * An activity representing a list of Sections. This activity has different
@@ -28,6 +34,11 @@ public class SectionListActivity extends FragmentActivity implements
 	 * device.
 	 */
 	private boolean mTwoPane;
+	private CheckNovedades checkNovedades = null;
+	private String LOADURL = "http://latarce.com/spl_news/check_novedades.php?action=get_novedades";
+	private String USER = "user";
+	private String PWD = "pwd";
+
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +59,9 @@ public class SectionListActivity extends FragmentActivity implements
 					.setActivateOnItemClick(true);
 		}
 
-		// TODO: If exposing deep links into your app, handle intents here.
+		// Request data from server
+		checkNovedades = new CheckNovedades();
+		checkNovedades.execute();
 	}
 
 	/**
@@ -126,4 +139,64 @@ public class SectionListActivity extends FragmentActivity implements
 				}
 		}
 	}
+	
+	// Async task
+	public class CheckNovedades extends AsyncTask<Void, Void, Boolean> {
+		private RestClient clientResponse;
+		@Override
+		protected Boolean doInBackground(Void... params) {
+			clientResponse = loadServerMsgs();
+			return true;
+		}
+		@Override
+		protected void onPostExecute(final Boolean success) {
+			printNovedadesIntent(clientResponse);
+			checkNovedades = null;
+		}
+		@Override
+		protected void onCancelled() {
+			checkNovedades = null;
+		}
+	}
+	
+    // Load Server Messages - REST Service
+    public RestClient loadServerMsgs(){  
+	    RestClient client = new RestClient(LOADURL);
+	    String authentication = USER + ":" + PWD;
+    	String encoding = Base64.encodeToString(authentication.getBytes(), Base64.NO_WRAP);
+    	client.AddHeader("Authorization", "Basic " + encoding);
+	     
+	    try {
+	        //the actual call here
+	        client.Execute(RestClient.RequestMethod.GET);
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    } 
+	    return client;		
+    }
+    
+    // Get Status values
+    public void printNovedadesIntent(RestClient client){
+    	String response = client.getResponse();
+    	if (response != null){
+			// Add messages from JSON response
+		    try {
+		    	JSONObject jsonMessages = new JSONObject(response);
+		    	JSONObject jsonStatus = jsonMessages.getJSONObject("novedades");	    	
+
+		    	if (Integer.parseInt(jsonStatus.getString("quintos")) == 1){
+		    		//Toast.makeText(getBaseContext(), "Novedades en Quintos", Toast.LENGTH_SHORT).show();
+		    		Intent intent = new Intent(this, Novedades.class);
+		    		intent.putExtra("message", jsonStatus.getString("mensaje_quintos"));
+					startActivity(intent);
+		    	}
+		    	
+		    	if (Integer.parseInt(jsonStatus.getString("latarce")) == 1){
+		    		Toast.makeText(getBaseContext(), "Novedades en Latarce", Toast.LENGTH_LONG).show();
+		    	}
+			} catch (JSONException e) {
+				e.printStackTrace();
+			}
+    	}
+    }
 }
