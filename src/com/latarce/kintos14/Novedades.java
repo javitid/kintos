@@ -2,6 +2,7 @@ package com.latarce.kintos14;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.widget.TextView;
 
 public class Novedades extends Activity{
@@ -12,5 +13,11 @@ public class Novedades extends Activity{
 		TextView textView= (TextView) findViewById(R.id.novedades_content); 
 		String texto = getIntent().getStringExtra("message");
 		textView.setText(texto);	
+	}
+	
+	@Override
+	public boolean onTouchEvent(MotionEvent event) {
+		finish();
+		return false;
 	}
 }

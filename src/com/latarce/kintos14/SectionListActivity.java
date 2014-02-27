@@ -105,8 +105,13 @@ public class SectionListActivity extends FragmentActivity implements
 
 				// CALENDARIO
 				case 3:
-					selectIntent = new Intent(this, Calendar.class);
-					startActivity(selectIntent);
+					if (android.os.Build.VERSION.SDK_INT >= 14){
+						selectIntent = new Intent(this, Calendar.class);
+						startActivity(selectIntent);
+					}
+					else{
+						Toast.makeText(getBaseContext(), "El calendario solo está disponible para versiones de Android 4.0 o superiores", Toast.LENGTH_LONG).show();
+					}
 					break;
 					
 				// Chat

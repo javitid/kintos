@@ -5,7 +5,7 @@
     android:versionName="1.0.2" >
 
     <uses-sdk
-        android:minSdkVersion="14"
+        android:minSdkVersion="8"
         android:targetSdkVersion="19" />
 
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
@@ -22,6 +22,7 @@
         <uses-library android:name="com.google.android.maps" />
         <activity
             android:name="com.latarce.kintos14.SectionListActivity"
+            android:screenOrientation="portrait"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -38,7 +39,6 @@
                 android:value=".SectionListActivity" />
         </activity>
 		<activity android:name="com.latarce.kintos14.Programa"
-				  android:screenOrientation="portrait"
 				  android:theme="@android:style/Theme.Light.NoTitleBar">
 		</activity>
 		<activity android:name="com.latarce.kintos14.Gps"
